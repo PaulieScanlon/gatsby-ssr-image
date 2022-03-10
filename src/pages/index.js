@@ -14,7 +14,7 @@ const Page = ({ serverData: { date, explanation, title, url } }) => {
 export default Page;
 
 export async function getServerData() {
-  const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=oSfWtiLxYuwmb4kX7VmsTeNmDZChb3vYYcSYlRoI');
+  const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API_KEY}`);
 
   const data = await response.json();
 
