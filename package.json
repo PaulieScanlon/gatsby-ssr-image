@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-ssr-image",
+  "name": "gatsby-ssr-image-cdn",
   "version": "1.0.0",
   "description": "A demo repo for using Sharp in a Serverless Function for us in a Gatsby SSR page.",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PaulieScanlon/gatsby-ssr-image.git"
+    "url": "git+https://github.com/PaulieScanlon/gatsby-ssr-image-cdn.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PaulieScanlon/gatsby-ssr-image/issues"
+    "url": "https://github.com/PaulieScanlon/gatsby-ssr-image-cdn/issues"
   },
-  "homepage": "https://github.com/PaulieScanlon/gatsby-ssr-image#readme",
+  "homepage": "https://github.com/PaulieScanlon/gatsby-ssr-image-cdn#readme",
   "dependencies": {
     "false": "^0.0.4",
     "gatsby": "^4.9.3",
