@@ -24,25 +24,27 @@ export async function getServerData() {
 
   const image = await probe(data.url);
 
+  const gatsbyImage = await gatsbyImageResolver(
+    {
+      url: image.url,
+      mimeType: image.mime,
+      width: image.width,
+      height: image.height,
+      filename: `${data.title}-image`
+    },
+    {
+      width: 400,
+      layout: 'constrained',
+      placeholder: 'none',
+      quality: 10
+    }
+  );
+
   return {
     status: 200,
     props: {
       ...data,
-      gatsbyImage: await gatsbyImageResolver(
-        {
-          url: image.url,
-          mimeType: image.mime,
-          width: image.width,
-          height: image.height,
-          filename: `${data.title}-image`
-        },
-        {
-          width: 400,
-          layout: 'constrained',
-          placeholder: 'none',
-          quality: 10
-        }
-      )
+      gatsbyImage
     },
     headers: {}
   };
